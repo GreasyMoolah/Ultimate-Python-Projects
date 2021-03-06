@@ -1,0 +1,42 @@
+06/03/2021 20:11:13
+06/03/2021 22:20:11
+
+# Network Sniffer for DHCP Traffic
+# Network Sniffer for DHCP Traffic
+# Network Sniffer for DHCP Traffic
+# Network Sniffer for DHCP Traffic
+# Network Sniffer for DHCP Traffic
+
+# This Script sniffs the network for DHCP traffic when the subject joins the wifi network outside.
+# It uses the say command to let User know.
+
+import sys
+import subprocess
+import os
+from decouple import config
+
+IP_NETWORK = config('IP_NETWORK')
+IP_DEVICE = config('IP_NETWORK')
+
+proc = subprocess.Popen(['ping',IP_NETWORK], stdout=subprocess.PIPE)
+
+while True:
+    line = proc.stdout.readline()
+    if not line:
+        break
+    connected_ip = line.decode('utf-8').split()[3]
+    
+    if connected_ip == IP_DEVICE:
+        subprocess.Popen(['say', 'Subject one just connected to the network!'])
+        
+# - You could import time and call the time.sleep() method
+# - You could connect to automate devices like Room lights, authomatically open PC's
+#set to your favourite website; have it connected to doorbells and automate desktops of Music playlist
+
+# Project not complete, dead-end will continue on the next search
+
+
+
+
+
+
