@@ -1,0 +1,23 @@
+# 07/03/2021 01:40:00
+# 07/03/2021 02:02:00
+
+# Python Project | Track Phone Number Location Using Python
+# https://www.youtube.com/watch?v=uuflFk_LQ-E
+
+# Identify Phone Number Location Using Python
+# Identify Phone Number Location Using Python
+# Identify Phone Number Location Using Python
+# Identify Phone Number Location Using Python
+# Identify Phone Number Location Using Python
+# Identify Phone Number Location Using Python
+
+import phonenumbers
+from test import number
+
+from phonenumbers import geocoder
+ch_number = phonenumbers.parse(number, "CH")
+print(geocoder.description_for_number(ch_nmber, "en"))
+
+from phonenumbers import carrier
+service_nmber = phonenumbers.parse(number, "RO")
+print(carrier,name_for_number(service_nmber,"en"))
